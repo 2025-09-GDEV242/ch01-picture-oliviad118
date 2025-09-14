@@ -6,7 +6,7 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Michael KÅ¡lling and David J. Barnes
  * @version 2016.02.29
  */
 public class Picture
@@ -14,7 +14,9 @@ public class Picture
     private Square wall;
     private Square window;
     private Triangle roof;
+    private triangle roof2;
     private Circle sun;
+    private Circle sun2;
     private boolean drawn;
 
     /**
@@ -24,8 +26,10 @@ public class Picture
     {
         wall = new Square();
         window = new Square();
-        roof = new Triangle();  
+        roof = new Triangle();
+        roof2 = new Triangle();
         sun = new Circle();
+        sun2= new Circle();
         drawn = false;
     }
 
@@ -40,7 +44,7 @@ public class Picture
             wall.changeSize(120);
             wall.makeVisible();
             
-            window.changeColor("black");
+            window.changeColor("blue");
             window.moveHorizontal(-120);
             window.moveVertical(40);
             window.changeSize(40);
@@ -50,12 +54,21 @@ public class Picture
             roof.moveHorizontal(20);
             roof.moveVertical(-60);
             roof.makeVisible();
+            roof2.changeSize(120, 210);
+            roof2.moveHorizontal(60);
+            roof2.moveVertical(-120);
+            roof2.makeVisible();
     
-            sun.changeColor("yellow");
+            sun.changeColor("red");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            sun2.changeColor("magenta")
+            sun2.moveHorizontal(200);
+            sun2.moveVertical(-120);
+            sun2.changeSize(40);
+            sun2.makeVisible();
             drawn = true;
         }
     }
@@ -68,7 +81,9 @@ public class Picture
         wall.changeColor("black");
         window.changeColor("white");
         roof.changeColor("black");
+        roof2.changecolor("black");
         sun.changeColor("black");
+        sun2.changeColor("black");
     }
 
     /**
@@ -77,8 +92,10 @@ public class Picture
     public void setColor()
     {
         wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
+        window.changeColor("magenta");
+        roof.changeColor("black");
+        roof2.changeColor("green");
         sun.changeColor("yellow");
+        sun2.changeColor("blue");
     }
 }
